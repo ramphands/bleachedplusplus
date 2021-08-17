@@ -1,7 +1,14 @@
 # bleached++
 slightly expanded and simplified version of the original Bleached PCB design by [andr-ew](https://github.com/andr-ew/bleached)
+
+
 ![alt text](pics/bleached++brd.jpg?raw=true)
+Render of the board
+
+
 ![alt text](pics/bleached++.jpg?raw=true)
+PCB layout with dimensions
+
 
 ## BOM
 

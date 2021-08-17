@@ -28,3 +28,8 @@ Gerbers are available as a .zip file in the GBR directory.  Simply provide the .
 
 ![alt text](pics/removeorderno.jpg?raw=true)
 
+
+## NOTE
+
+This is an untested PCB!  Use at your own risk.
+

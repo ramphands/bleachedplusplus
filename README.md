@@ -1,6 +1,7 @@
 # bleached++
 slightly expanded and simplified version of the original Bleached PCB design by [andr-ew](https://github.com/andr-ew/bleached)
-
+![alt text](pics/bleached++brd.jpg?raw=true)
+![alt text](pics/bleached++.jpg?raw=true)
 
 ## BOM
 

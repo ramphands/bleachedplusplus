@@ -28,6 +28,15 @@ Gerbers are available as a .zip file in the GBR directory.  Simply provide the .
 
 ![alt text](pics/removeorderno.jpg?raw=true)
 
+## Firmware
+
+Firmware has been modified from the original Bleached firmware to include the two additional potentiometers.
+
+Also, an additional dual-bank firmware is available incorporating the changes made by [mat](https://github.com/justmat/) which allows for a dual 8-bank configuration.  The active bank is selectable with the lower-left potentiometer, with feedback provided by the Teensy LED.
+
+## Top/bottom panels/enclosure
+
+An SVG file is provided for making your own top/bottom panels.  Use Inkscape or other SVG-reading software to view the file.  All elements are seperated into individual layers, so you are able to hide/show the appropriate information.  In my case, I make only the outline and all the centrepunch marking crosses visible, then save as a PDF and print at a 1:1 size. I use this as a template for cutting and drilling a blank top panel.  I then hide the marking crosses for the LED and potentiometers, repeat the PDF process and use the resultant template for the bottom panel.
 
 ## NOTE
 

@@ -1,6 +1,7 @@
 /* Sonoclast pd knobs for TeensyLC
  
   * Originally modified by andrew for bleached (Teensy 3.2) 02/22/2019
+  * Modified by mat to include a dual-bank mode 7/26/2020
   * Modified by ramphands for bleached++ (Teensy LC) 24/Aug/2021
  
    Copyright March 2019 - havencking@gmail.com
@@ -26,6 +27,9 @@
    Tools > USB Type > Serial + MIDI
 */
 
+// led state
+bool led_state = false;
+
 // Map MIDI CC channels to knobs numbered left to right.
 #define CC01  102
 #define CC02  103
@@ -36,6 +40,15 @@
 #define CC07  108
 #define CC08  109
 #define CC09  110
+#define CC10  111
+#define CC11  112
+#define CC12  113
+#define CC13  114
+#define CC14  115
+#define CC15  116
+#define CC16  117
+#define CC17  118
+
 
 
 // Map the TeensyLC pins to each potentiometer numbered left to right.
@@ -73,10 +86,14 @@ uint8_t pot[9] = {POT01,
                   };
 
 // an array of CC numbers
-uint8_t cc[9] = { CC01,
+uint8_t cc_set_1[8] = {
                   CC02, CC03, CC04, CC05, CC06, CC07, CC08, CC09
                  };
 
+// an array of CC numbers
+uint8_t cc_set_2[8] = {
+                  CC10, CC11, CC12, CC13, CC14, CC15, CC16, CC17
+                 };
 // Prevent jitter when reading the potentiometers.
 // Higher value is less chance of jitter but also less precision.
 const uint8_t nbrhd = 5;
@@ -87,11 +104,15 @@ uint16_t loop_count = 0;
 void setup() {
   // serial monitoring for debugging
   Serial.begin(38400);
+  
+   // led pin mode
+  pinMode(13, OUTPUT);
 
   // potentiometers
   analogReadResolution(POT_BIT_RES);
   analogReadAveraging(POT_NUM_READS);
 }
+
 
 void loop() {
   // Read each knob, and send MIDI CC only if the value changed.
@@ -99,18 +120,29 @@ void loop() {
     uint16_t pot_val = analogRead(pot[i]);
     if ((pot_val < prev_pot_val[i] - nbrhd) ||
         (pot_val > prev_pot_val[i] + nbrhd)) {
-      usbMIDI.sendControlChange(cc[i], pot_val >> (POT_BIT_RES - 7), MIDI_CHANNEL);
-      prev_pot_val[i] = pot_val;
+          // use pot1 to control led  
+          if (i == 0 and pot_val > 511) {
+            led_state = true;
+            digitalWrite(13, HIGH);
+          }
+          else if (i == 0 and pot_val < 511) {
+            led_state = false;
+            digitalWrite(13, LOW);
+          }
+          // use led state to decide which cc_set to use
+          if (i != 0 and (led_state)) {
+            //Serial.print(cc_set_2[i - 1]);
+            usbMIDI.sendControlChange(cc_set_2[i - 1], pot_val >> (POT_BIT_RES - 7), MIDI_CHANNEL);
+          }
+          else if (i != 0 and not (led_state)) {
+            //Serial.print(cc_set_1[i - 1]);
+            usbMIDI.sendControlChange(cc_set_1[i - 1], pot_val >> (POT_BIT_RES - 7), MIDI_CHANNEL);
+          }
+          //Serial.println("");
+          prev_pot_val[i] = pot_val;
     }
+	
+  while (usbMIDI.read()) {
+    // read & ignore incoming messages
   }
-
-  // Periodically send MIDI CC for every knob so that the receiving end matches the knobs
-  // even when changing pure data patches.
-//  if (loop_count > LOOPS_PER_REFRESH) {
-//    for (uint8_t i = 0; i < 7; i++) {
-//      usbMIDI.sendControlChange(cc[i], analogRead(pot[i]) >> (POT_BIT_RES - 7), MIDI_CHANNEL);
-//    }
-//    loop_count = 0;
-//  }
-//  loop_count++;
 }

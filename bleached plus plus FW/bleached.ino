@@ -103,6 +103,10 @@ void loop() {
       prev_pot_val[i] = pot_val;
     }
   }
+  
+  // MIDI Controllers should discard incoming MIDI messages.
+  while (usbMIDI.read()) {
+  }
 
   // Periodically send MIDI CC for every knob so that the receiving end matches the knobs
   // even when changing pure data patches.

@@ -111,7 +111,7 @@ F 1 "R_POT" H 4931 2805 50  0000 R CNN
 F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 5000 2850 50  0001 C CNN
 F 3 "~" H 5000 2850 50  0001 C CNN
 	1    5000 2850
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR09
@@ -146,7 +146,7 @@ F 1 "R_POT" H 5931 2805 50  0000 R CNN
 F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 6000 2850 50  0001 C CNN
 F 3 "~" H 6000 2850 50  0001 C CNN
 	1    6000 2850
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR010
@@ -181,7 +181,7 @@ F 1 "R_POT" H 6931 2805 50  0000 R CNN
 F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 7000 2850 50  0001 C CNN
 F 3 "~" H 7000 2850 50  0001 C CNN
 	1    7000 2850
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR011
@@ -216,7 +216,7 @@ F 1 "R_POT" H 7931 2805 50  0000 R CNN
 F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 8000 2850 50  0001 C CNN
 F 3 "~" H 8000 2850 50  0001 C CNN
 	1    8000 2850
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR012
@@ -251,7 +251,7 @@ F 1 "R_POT" H 8931 2805 50  0000 R CNN
 F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 9000 2850 50  0001 C CNN
 F 3 "~" H 9000 2850 50  0001 C CNN
 	1    9000 2850
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR013
@@ -286,7 +286,7 @@ F 1 "R_POT" H 4931 3865 50  0000 R CNN
 F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 5000 3910 50  0001 C CNN
 F 3 "~" H 5000 3910 50  0001 C CNN
 	1    5000 3910
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR019
@@ -321,7 +321,7 @@ F 1 "R_POT" H 5931 3865 50  0000 R CNN
 F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 6000 3910 50  0001 C CNN
 F 3 "~" H 6000 3910 50  0001 C CNN
 	1    6000 3910
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR020
@@ -356,7 +356,7 @@ F 1 "R_POT" H 6931 3865 50  0000 R CNN
 F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 7000 3910 50  0001 C CNN
 F 3 "~" H 7000 3910 50  0001 C CNN
 	1    7000 3910
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR021
@@ -391,7 +391,7 @@ F 1 "R_POT" H 7931 3865 50  0000 R CNN
 F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 8000 3910 50  0001 C CNN
 F 3 "~" H 8000 3910 50  0001 C CNN
 	1    8000 3910
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR022

@@ -141,7 +141,7 @@ void loop() {
           //Serial.println("");
           prev_pot_val[i] = pot_val;
     }
-	
+  }
   while (usbMIDI.read()) {
     // read & ignore incoming messages
   }

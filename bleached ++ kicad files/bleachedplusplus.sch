@@ -432,4 +432,48 @@ Connection ~ 1080 2940
 Wire Wire Line
 	1080 2940 1080 2950
 NoConn ~ 3760 3730
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 6130E76A
+P 8760 5340
+F 0 "H2" H 8860 5386 50  0000 L CNN
+F 1 "MountingHole" H 8860 5295 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965_Pad" H 8760 5340 50  0001 C CNN
+F 3 "~" H 8760 5340 50  0001 C CNN
+	1    8760 5340
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 6130F911
+P 9660 5330
+F 0 "H1" H 9760 5376 50  0000 L CNN
+F 1 "MountingHole" H 9760 5285 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965_Pad" H 9660 5330 50  0001 C CNN
+F 3 "~" H 9660 5330 50  0001 C CNN
+	1    9660 5330
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 6130FB77
+P 8760 5630
+F 0 "H3" H 8860 5676 50  0000 L CNN
+F 1 "MountingHole" H 8860 5585 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965_Pad" H 8760 5630 50  0001 C CNN
+F 3 "~" H 8760 5630 50  0001 C CNN
+	1    8760 5630
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 6130FCD8
+P 9670 5650
+F 0 "H4" H 9770 5696 50  0000 L CNN
+F 1 "MountingHole" H 9770 5605 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965_Pad" H 9670 5650 50  0001 C CNN
+F 3 "~" H 9670 5650 50  0001 C CNN
+	1    9670 5650
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

@@ -40,5 +40,5 @@ An SVG file is provided for making your own top/bottom panels.  Use Inkscape or 
 
 ## NOTE
 
-This is an untested PCB!  Use at your own risk.
+Design has been tested as of 16th Sept 2021 and works as intended with the firmware.
 

@@ -14,14 +14,14 @@ PCB layout with dimensions
 
 
 ## BOM
-board:
+### board:
 1x TeensyLC
 
 2x 14-pin pin headers.
 
 9x 10K linear potentiometers
 
-mounting HW:
+### mounting HW:
 4x 10mm M2.5 female-female standoffs - to be used between the board and the top panel
 
 4x 5mm* M2.5 male-female standoffs  - to be used between the board and the bottom panel (*any length >3mm would be fine)

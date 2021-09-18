@@ -1,6 +1,9 @@
 # bleached++
 slightly expanded and simplified version of the original Bleached PCB design by [andr-ew](https://github.com/andr-ew/bleached)
 
+![alt text](pics/finishedbleachedpp.jpg?raw=true)
+Bleached++ in operation
+
 
 ![alt text](pics/bleached++brd.jpg?raw=true)
 Render of the board
@@ -11,16 +14,19 @@ PCB layout with dimensions
 
 
 ## BOM
-
+board:
 1x TeensyLC
+
+2x 14-pin pin headers.
 
 9x 10K linear potentiometers
 
-4x 10mm M2.5 female-female standoffs
+mounting HW:
+4x 10mm M2.5 female-female standoffs - to be used between the board and the top panel
 
-4x 5mm M2.5 male-female standoffs
+4x 5mm* M2.5 male-female standoffs  - to be used between the board and the bottom panel (*any length >3mm would be fine)
 
-8x M2.5 screws
+8x M2.5 5mm length screws
 
 ## PCBs
 
